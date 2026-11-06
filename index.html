@@ -2,731 +2,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CLEAN WAVE | Industrial Chemical Solutions</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #f5f9ff;
-    color: #172b4d;
-}
-
-a {
-    text-decoration: none;
-}
-
-header {
-    width: 100%;
-    background: #07529b;
-    color: white;
-    padding: 15px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-}
-
-.logo-circle {
-    width: 40px;
-    height: 40px;
-    background: white;
-    color: #07529b;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.logo h2 {
-    font-size: 15px;
-    letter-spacing: 2px;
-}
-
-.logo p {
-    font-size: 8px;
-    color: #d8ecff;
-    letter-spacing: 2px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 23px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #ffdf70;
-}
-
-.call-btn {
-    background: #ffbd35;
-    color: #102b48;
-    padding: 12px 21px;
-    border-radius: 30px;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-}
-
-.call-btn:hover {
-    background: white;
-}
-
-/* HERO */
-.hero {
-    min-height: 570px;
-    background:
-        linear-gradient(rgba(0, 30, 65, 0.72), rgba(0, 30, 65, 0.72)),
-        url("https://images.unsplash.com/photo-1769695832228-ab959c7c7e0d?auto=format&fit=crop&w=2000&q=85");
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    padding: 80px 9%;
-    color: white;
-}
-
-.hero-content {
-    max-width: 750px;
-}
-
-.hero h1 {
-    font-size: 55px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    color: #ffcb50;
-}
-
-.hero p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.primary-btn {
-    display: inline-block;
-    background: #ffbd35;
-    color: #132c48;
-    padding: 15px 28px;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.primary-btn:hover {
-    background: white;
-    transform: translateY(-3px);
-}
-
-/* COMMON SECTIONS */
-section {
-    padding: 75px 8%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.section-title h2 {
-    font-size: 35px;
-    color: #07529b;
-    margin-bottom: 12px;
-}
-
-.section-title p {
-    color: #64748b;
-    line-height: 1.7;
-}
-
-/* ABOUT */
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 45px;
-    align-items: center;
-}
-
-.about-container img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.about-text h2 {
-    color: #07529b;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    color: #53657b;
-    line-height: 1.9;
-    margin-bottom: 15px;
-}
-
-/* PRODUCTS */
-.products {
-    background: #eaf4ff;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.product-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.13);
-}
-
-.product-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.product-card h3 {
-    color: #07529b;
-    padding: 18px 18px 8px;
-    font-size: 19px;
-}
-
-.product-card p {
-    color: #64748b;
-    padding: 0 18px 20px;
-    line-height: 1.6;
-    font-size: 14px;
-}
-
-/* OTHER PRODUCTS */
-.other-products {
-    margin-top: 45px;
-    text-align: center;
-}
-
-.other-products h3 {
-    color: #07529b;
-    margin-bottom: 20px;
-}
-
-.tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-}
-
-.tag {
-    background: white;
-    color: #07529b;
-    padding: 12px 20px;
-    border-radius: 25px;
-    border: 1px solid #c5ddf5;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-/* WHY US */
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.why-card {
-    background: white;
-    padding: 30px 22px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-}
-
-.why-card .emoji {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.why-card h3 {
-    color: #07529b;
-    margin-bottom: 12px;
-}
-
-.why-card p {
-    color: #64748b;
-    line-height: 1.7;
-}
-
-/* CONTACT */
-#contact {
-    background:
-        linear-gradient(rgba(3, 30, 55, 0.78), rgba(3, 30, 55, 0.78)),
-        url("https://images.unsplash.com/photo-1769695832228-ab959c7c7e0d?auto=format&fit=crop&w=2000&q=85");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding: 85px 8%;
-}
-
-#contact .section-title h2 {
-    color: white;
-}
-
-#contact .section-title p {
-    color: #e2efff;
-}
-
-.contact-card {
-    max-width: 850px;
-    margin: auto;
-    background: white;
-    border-radius: 18px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.contact-item {
-    background: #edf6ff;
-    padding: 22px 12px;
-    border-radius: 12px;
-}
-
-.contact-item .emoji {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.contact-item h3 {
-    color: #07529b;
-    font-size: 17px;
-    margin-bottom: 8px;
-}
-
-.contact-item p,
-.contact-item a {
-    color: #52657b;
-    font-size: 14px;
-    line-height: 1.6;
-    overflow-wrap: anywhere;
-}
-
-.whatsapp-btn {
-    display: inline-block;
-    background: #20b968;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-weight: bold;
-}
-
-.whatsapp-btn:hover {
-    background: #128b4b;
-}
-
-/* FOOTER */
-footer {
-    background: #052c55;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-    line-height: 1.8;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-/* TABLET */
-@media (max-width: 900px) {
-    header {
-        padding: 15px 4%;
-    }
-
-    nav {
-        gap: 14px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-container {
-        gap: 25px;
-    }
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 18px 15px;
-    }
-
-    .logo {
-        justify-content: center;
-    }
-
-    .logo h2 {
-        font-size: 22px;
-    }
-
-    nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 12px 18px;
-    }
-
-    nav a {
-        font-size: 14px;
-    }
-
-    /* Keep Call Us visible on mobile */
-    .call-btn {
-        display: inline-flex !important;
-        width: auto;
-        min-width: 140px;
-        margin: 5px auto 0;
-        padding: 12px 22px;
-        font-size: 14px;
-    }
-
-    .hero {
-        min-height: 470px;
-        padding: 65px 7%;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    section {
-        padding: 55px 6%;
-    }
-
-    .section-title h2 {
-        font-size: 28px;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-container img {
-        height: 250px;
-    }
-
-    .about-text h2 {
-        font-size: 27px;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .product-card img {
-        height: 220px;
-    }
-
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-card {
-        padding: 25px 18px;
-    }
-
-    #contact {
-        padding: 60px 5%;
-    }
-}
-
-/* SMALL MOBILE */
-@media (max-width: 360px) {
-    .logo h2 {
-        font-size: 19px;
-    }
-
-    nav {
-        gap: 12px;
-    }
-
-    nav a {
-        font-size: 13px;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLEAN WAVE | Cleaning Chemical Manufacturer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header>
-    <div class="logo">
-        <div class="logo-circle">C</div>
-        <div>
-            <h2>CLEAN WAVE</h2>
-            <p>INDUSTRIAL CHEMICAL SOLUTIONS</p>
-        </div>
-    </div>
+<header class="header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">CLEAN <span>WAVE</span></a>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
-        <a href="tel:+919106562058" class="call-btn">📞 Call Us</a>
-    </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="cart.html" class="cart-btn">Cart <span id="cartCount">0</span></a>
+            <a href="tel:+919106562058" class="call-btn">Call Us</a>
+        </nav>
+    </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="hero-content">
-        <h1>PURE SOLUTIONS.<br><span>BETTER PERFORMANCE.</span></h1>
-        <p>
-            CLEAN WAVE provides industrial chemical solutions for water
-            treatment, RO plants, boilers, cooling towers and industrial
-            applications. We support small and bulk quantity requirements.
-        </p>
-        <a href="#products" class="primary-btn">Explore Our Products →</a>
-    </div>
-</section>
+<main>
 
-<!-- ABOUT -->
-<section id="about">
-    <div class="about-container">
-        <img
-            src="https://images.squarespace-cdn.com/content/v1/5e8f2430609470240c1af8ca/1596463994232-MEEEFWFVOA01J5LYI4I1/IMG_0697-min.jpg?format=1500w"
-            alt="Industrial water treatment equipment">
+    <!-- HOME / INDUSTRIAL BACKGROUND -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">WELCOME TO CLEAN WAVE</span>
+            <h1>Industrial Cleaning<br><span>Solutions You Can Trust</span></h1>
+            <p>
+                Quality cleaning chemicals for industrial, household and
+                automotive needs. Available in small and bulk quantities.
+            </p>
+            <div class="hero-buttons">
+                <a href="#products" class="primary-btn">Explore Products</a>
+                <a href="tel:+919106562058" class="secondary-btn">Call Us</a>
+            </div>
+        </div>
+    </section>
 
-        <div class="about-text">
+    <!-- THREE CATEGORY CARDS ONLY -->
+    <section class="category-section" id="products">
+        <div class="section-heading">
+            <span>OUR PRODUCTS</span>
+            <h2>Explore Our Categories</h2>
+            <p>Select a category to view its products.</p>
+        </div>
+
+        <div class="category-grid">
+
+            <a href="industrial.html" class="category-card">
+                <img
+                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85"
+                    alt="Industrial factory and equipment"
+                    onerror="this.onerror=null;this.src='https://placehold.co/900x600/123b5d/ffffff?text=Industrial+Chemicals';"
+                >
+                <div class="category-content">
+                    <h3>Industrial Chemicals</h3>
+                    <p>Industrial cleaning and water-treatment products.</p>
+                    <span>Explore Products →</span>
+                </div>
+            </a>
+
+            <a href="household.html" class="category-card">
+                <img
+                    src="https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=900&q=85"
+                    alt="Household cleaning products"
+                    onerror="this.onerror=null;this.src='https://placehold.co/900x600/123b5d/ffffff?text=Household+Products';"
+                >
+                <div class="category-content">
+                    <h3>Household Products</h3>
+                    <p>Cleaning products for everyday household use.</p>
+                    <span>Explore Products →</span>
+                </div>
+            </a>
+
+            <a href="car-wash.html" class="category-card">
+                <img
+                    src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=900&q=85"
+                    alt="Car wash"
+                    onerror="this.onerror=null;this.src='https://placehold.co/900x600/123b5d/ffffff?text=Car+Wash+Products';"
+                >
+                <div class="category-content">
+                    <h3>Car Wash Products</h3>
+                    <p>Products for vehicle washing and cleaning.</p>
+                    <span>Explore Products →</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="about-image">
+            <img
+                src="https://img.freepik.com/premium-photo/clean-wave-logo-circle-icon-vector-design_1313853-25604.jpg"
+                alt="Industrial facility"
+                onerror="this.onerror=null;this.src='https://placehold.co/900x600/123b5d/ffffff?text=CLEAN+WAVE';"
+            >
+        </div>
+
+        <div class="about-content">
+            <span class="section-tag">ABOUT OUR COMPANY</span>
             <h2>About CLEAN WAVE</h2>
             <p>
-                CLEAN WAVE is focused on supplying industrial chemical
-                solutions for different industrial and water treatment needs.
+                CLEAN WAVE is based in Palsana, Surat, Gujarat, India.
+                We offer cleaning chemical products for industrial,
+                household and car wash applications.
             </p>
             <p>
-                Our product range includes RO chemicals, boiler chemicals,
-                cooling tower chemicals, water softener chemicals and
-                industrial cleaning solutions.
+                We support both small and bulk quantity enquiries.
+                Contact our team to discuss your product requirements.
             </p>
-            <p>
-                Located in Palsana, Surat, Gujarat, we serve customers
-                requiring both small and bulk quantities.
-            </p>
-            <a href="#contact" class="primary-btn">Contact Us</a>
+            <a href="#contact" class="primary-btn">Contact Our Team</a>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- PRODUCTS -->
-<section class="products" id="products">
-    <div class="section-title">
-        <h2>Our Products</h2>
-        <p>Industrial chemical solutions for different applications</p>
-    </div>
-
-    <div class="product-grid">
-
-        <div class="product-card">
-            <img src="https://images.squarespace-cdn.com/content/v1/5e8f2430609470240c1af8ca/1596463994232-MEEEFWFVOA01J5LYI4I1/IMG_0697-min.jpg?format=1500w" alt="RO treatment equipment">
-            <h3>RO Antiscalant</h3>
-            <p>Chemical solution for reverse osmosis water treatment applications.</p>
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="section-heading">
+            <span>GET IN TOUCH</span>
+            <h2>Contact CLEAN WAVE</h2>
+            <p>For product enquiries and bulk orders, contact us.</p>
         </div>
 
-        <div class="product-card">
-            <img src="https://www.speboilers.com/assets/img/products/Industrial-Steam-Boiler.jpg" alt="Industrial boiler">
-            <h3>Boiler Chemicals</h3>
-            <p>Boiler-related chemical products for industrial applications.</p>
-        </div>
+        <div class="contact-layout">
+            <div class="contact-details">
 
-        <div class="product-card">
-            <img src="https://assets.zyrosite.com/cdn-cgi/image/format%3Dauto%2Cw%3D768%2Ch%3D550%2Cfit%3Dcrop/m2WEK3JrxBH2nex4/gemini_generated_image_omyvqbomyvqbomyv-Yyv0zzkab4Fz46JV.png" alt="Cooling tower equipment">
-            <h3>Cooling Tower Chemicals</h3>
-            <p>Chemical products for cooling tower water treatment systems.</p>
-        </div>
+                <div class="contact-person">
+                    <h3>Sameer Kureshi</h3>
+                    <a href="tel:+919106562058">+91 9106562058</a>
+                    <a class="whatsapp-btn" href="https://wa.me/919724656591" target="_blank" rel="noopener">
+                        WhatsApp Sameer
+                    </a>
+                </div>
 
-        <div class="product-card">
-            <img src="https://anhar.com.lb/files/images/albums/5/sibline-softener-11-a4d29df4df97.jpg" alt="Water softener equipment">
-            <h3>Water Softener Chemicals</h3>
-            <p>Products for industrial water softening applications.</p>
-        </div>
+                <div class="contact-person">
+                    <h3>Alamgir Kureshi</h3>
+                    <a href="tel:+919825411086">+91 9825411086</a>
+                    <a class="whatsapp-btn" href="https://wa.me/917990171874" target="_blank" rel="noopener">
+                        WhatsApp Alamgir
+                    </a>
+                </div>
 
-        <div class="product-card">
-            <img src="https://h2s.co.in/cdn/shop/articles/Textile_Processing_and_Hard_Water-_The_Quality_Issue_Killing_Your_Unit_s_Margins.webp?crop=center&height=630&v=1779367552&width=1200" alt="Textile industrial processing">
-            <h3>Scouring Agent</h3>
-            <p>Industrial textile-processing chemical product.</p>
-        </div>
-
-        <div class="product-card">
-            <img src="https://image.made-in-china.com/2f0j00JjdcokvytWbZ/Full-Production-Line-Liquid-Soap-Making-Machine-Dish-Washer-Mixing-Equipment-Industrial-Blender-Liquid-Soap-Hand-Wash-Mixer.webp" alt="Liquid soap manufacturing equipment">
-            <h3>Soap Liquid</h3>
-            <p>Liquid soap product for cleaning applications.</p>
-        </div>
-
-    </div>
-
-    <div class="other-products">
-        <h3>Other Available Products</h3>
-        <div class="tag-container">
-            <span class="tag">RO Descaling</span>
-            <span class="tag">Low-pH Chemicals</span>
-            <span class="tag">High-pH Chemicals</span>
-            <span class="tag">Boiler Anti Scaling</span>
-            <span class="tag">Boiler pH Booster</span>
-            <span class="tag">Oxygen Scavenger</span>
-            <span class="tag">Single Formulation</span>
-            <span class="tag">Boiler Descaling</span>
-            <span class="tag">NIDE</span>
-            <span class="tag">Roof Agent</span>
-            <span class="tag">Chiller Plant Chemicals</span>
-        </div>
-    </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section>
-    <div class="section-title">
-        <h2>Why Choose CLEAN WAVE?</h2>
-        <p>Our focus is on dependable supply and customer support.</p>
-    </div>
-
-    <div class="why-grid">
-        <div class="why-card">
-            <div class="emoji">🏭</div>
-            <h3>Industrial Solutions</h3>
-            <p>A range of chemical products for industrial applications.</p>
-        </div>
-
-        <div class="why-card">
-            <div class="emoji">📦</div>
-            <h3>Small & Bulk Supply</h3>
-            <p>Supply options for different order quantities.</p>
-        </div>
-
-        <div class="why-card">
-            <div class="emoji">🤝</div>
-            <h3>Customer Support</h3>
-            <p>Contact us for product information and enquiries.</p>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <div class="section-title">
-        <h2>Contact CLEAN WAVE</h2>
-        <p>Get in touch for product enquiries and orders.</p>
-    </div>
-
-    <div class="contact-card">
-        <div class="contact-grid">
-
-            <div class="contact-item">
-                <div class="emoji">👤</div>
-                <h3>Contact Person</h3>
-                <p>1.Sameer Kureshi</p>
-                <p>2.Alamgir Kureshi</p>
+                <div class="contact-location">
+                    <h3>Our Location</h3>
+                    <p>Palsana, Surat, Gujarat, India</p>
+                    <a class="directions-btn"
+                       href="https://www.google.com/maps/dir/?api=1&destination=Palsana%2C+Surat%2C+Gujarat%2C+India"
+                       target="_blank" rel="noopener">
+                        Get Directions ↗
+                    </a>
+                </div>
             </div>
 
-            <div class="contact-item">
-                <div class="emoji">📞</div>
-                <h3>Mobile Number</h3>
-                <a href="tel:+919106562058">+91 91065 62058</a> <br>
-                <a href="tel:+919825411086">+91 9825411086</a>
+            <div class="contact-map">
+                <iframe
+                    title="CLEAN WAVE location"
+                    src="https://maps.google.com/maps?q=Palsana%2C%20Surat%2C%20Gujarat%2C%20India&z=13&output=embed"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <a class="map-link"
+                   href="https://www.google.com/maps/dir/?api=1&destination=Palsana%2C+Surat%2C+Gujarat%2C+India"
+                   target="_blank" rel="noopener">
+                    Open Map and Directions
+                </a>
             </div>
-
-            <div class="contact-item">
-                <div class="emoji">📍</div>
-                <h3>Location</h3>
-                <p>Palsana, Surat,<br>Gujarat, India</p>
-            </div>
-
         </div>
+    </section>
 
-        <a class="whatsapp-btn"
-           href="https://wa.me/919724656591"
-           target="_blank"
-           rel="noopener">
-            💬 Contact on WhatsApp
-        </a>
-    </div>
-</section>
+</main>
 
-<!-- FOOTER -->
-<footer>
-    <h3>CLEAN WAVE</h3>
-    <p>Industrial Chemical Solutions</p>
-    <p>Palsana, Surat, Gujarat, India</p>
-    <p>© 2026 CLEAN WAVE. All Rights Reserved.</p>
+<footer class="footer">
+    <a href="index.html" class="logo footer-logo">CLEAN <span>WAVE</span></a>
+    <p>Cleaning solutions for industrial, household and automotive needs.</p>
+    <p class="copyright">© 2026 CLEAN WAVE. All Rights Reserved.</p>
 </footer>
 
 </body>
